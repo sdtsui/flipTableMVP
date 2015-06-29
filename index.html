@@ -1,0 +1,21 @@
+<div>Hello World!</div>
+
+<script type="text/javascript">
+
+var handleOrientation = function(event) {
+  var absolute = event.absolute;
+  var alpha    = event.alpha;
+  var beta     = event.beta;
+  var gamma    = event.gamma;
+  console.log("Absolute : ", absolute);
+  console.log("alpha : ", absolute);
+  console.log("beta : ", absolute);
+  console.log("gamma : ", absolute);
+}
+
+window.addEventListener("deviceorientation", handleOrientation, true);
+// setInterval(function(){
+  
+// },1000)
+
+</script>
