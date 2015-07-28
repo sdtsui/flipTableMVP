@@ -1,21 +1,64 @@
-<div>Hello World!</div>
+<!DOCTYPE html>
+<html>
+ <head>
+     <title>Flip Table MVP v 0.0.23</title>
+     <style>
+         table {
+             border-collapse: collapse;
+         }
+         td {
+             width: 100px;
+             border: 1px solid black;
+         }
+     </style>
+ </head>
+  <body>
 
-<script type="text/javascript">
+    <table>
+        <tr>
+            <td>Alpha</td>
+            <td>Gamma</td>
+            <td>Beta</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Rotate Degrees</td>
+            <td>Left To Right</td>
+            <td>Front To Back</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td id="alpha"></td>
+            <td id="gamma"></td>
+            <td id="beta"></td>
+            <td ></td>
+        </tr>
+        <tr>
+            <td>DIFF</td>
+            <td>STAGE</td>
+            <td>pDor.gamma</td>
+            <td>processedGamma</td>
 
-var handleOrientation = function(event) {
-  var absolute = event.absolute;
-  var alpha    = event.alpha;
-  var beta     = event.beta;
-  var gamma    = event.gamma;
-  console.log("Absolute : ", absolute);
-  console.log("alpha : ", absolute);
-  console.log("beta : ", absolute);
-  console.log("gamma : ", absolute);
-}
+        </tr>
+        <tr>
+            <td id='diff'></td>
+            <td id='flipStage'>None</td>
+            <td id='pDor.gamma'></td>
+            <td id="processedGamma"> </td>
 
-window.addEventListener("deviceorientation", handleOrientation, true);
-// setInterval(function(){
-  
-// },1000)
+        </tr>
+        <tr>
+            <td id='flip'></td>
+        </tr>
+    </table>
+    <br>
 
-</script>
+    <canvas id="myCanvas" width="750" height="750" style="border:1px solid #d3d3d3;">
+    </canvas>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+      var socket = io();
+    </script>
+    <script src="../../../app.js"></script>
+  </body>
+</html>
